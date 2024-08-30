@@ -19,10 +19,11 @@
         function x() {
             if (true) {
 
-                console.log(serie);
+                var serie = 'Game Of Thrones'
+                console.log('Função: ' + serie);
 
                 if (true) {
-                    console.log(serie);
+                    console.log('Bloco dentro da Função:  ' + serie);
                 }
             }
         }
@@ -30,8 +31,14 @@
         x()
 
         if (true) {
-            console.log(serie);
+            console.log('Global: ' + serie);
         }
+
+        if (true) {
+            let serie = "The Walking Dead";
+            console.log(serie)
+        }
+        console.log(serie)
 
     </script>
 </head>
