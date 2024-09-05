@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        function contarUmaHistoria(personagem = 'Rex', atividade = 'correr pela tarde no parque', nome_dono = 'Wellington') {
+            document.write(`Era uma vez um cachorro chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono} e eles viveram felizes para sempre! `)
+        }
+
+        contarUmaHistoria(undefined, 'nadar todas as tarde de calor', 'Rafael')
+        //contarUmaHistoria (undefined, undefined, undefined)
+    </script>
+</head>
+
+<body>
+    <div id="output"></div>
+</body>
+
+</html>
