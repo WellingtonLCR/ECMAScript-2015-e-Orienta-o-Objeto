@@ -1,48 +1,26 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Var e Let</title>
 
-<html lang="PT">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
-
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
-        //Global, Função, Bloco
-        var serie = 'Sons Of Anarchy'
+      
+      //3 escopos: global, função e bloco
 
-        function x() {
-            if (true) {
+      let serie = 'Friends'
 
-                var serie = 'Game Of Thrones'
-                console.log('Função: ' + serie);
+      {
+        let serie = 'The Walking Dead'
+        console.log('dentro do bloco: ' + serie)
+      }
 
-                if (true) {
-                    console.log('Bloco dentro da Função:  ' + serie);
-                }
-            }
-        }
-
-        x()
-
-        if (true) {
-            console.log('Global: ' + serie);
-        }
-
-        if (true) {
-            let serie = "The Walking Dead";
-            console.log(serie)
-        }
-        console.log(serie)
-
+      console.log('fora do bloco: ' + serie)
     </script>
-</head>
-
-<body>
+  </head>
+  
+  <body>
     <div id="output"></div>
-</body>
-
+  </body>
 </html>

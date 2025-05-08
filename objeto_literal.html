@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objeto Literal</title>
+
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <script type="text/babel">
+            class produto {
+                constructor(descricao, preco) {
+                    this.descricao = descricao
+                    this.preco = preco
+                }
+                verDescricao() {
+                    console.log(`${this.descricao} por apenas ${this.preco}`)
+                }
+            }
+            let produto1 = new produto('notebook', 2200)
+            produto1.verDescricao()
+
+            //-----------------------------------------
+            
+            let produtdoLiteral = {
+                descricao: 'Geladeira',
+                preco: 1200,
+                verDescricao() {
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+                }
+            }
+            produtdoLiteral.verDescricao()
+        </script>
+    </head>
+
+    <body>
+        <div id="output"></div>
+    </body>
+</html>

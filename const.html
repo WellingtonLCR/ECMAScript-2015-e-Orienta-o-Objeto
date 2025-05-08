@@ -1,31 +1,25 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Variavel Const</title>
 
-<html lang="PT">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
-
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
-        const SERIE = 'Friends'
 
-        function x() {
-            const SERIE = 'The Walking Dead'
-            console.log('Dentro da Função: ' + SERIE)
-        }
+      const SERIE = 'Friends'
 
-        x()
+      function x() { const SERIE = 'The Walking Dead'
+        console.log('dentro da funcao: ' + SERIE)
+      }
 
-        console.log('Escopo global: ' + SERIE)
+      x()
+
+      console.log('escopo global: ' + SERIE)
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="output"></div>
-</body>
-
+  </body>
 </html>
