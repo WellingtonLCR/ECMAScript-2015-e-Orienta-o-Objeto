@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Destructuring - Parte 1</title>
+    <title>Destructuring - Parte 2</title>
 
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
-
-        let produto = {
-            descricao: 'Notebook',
-            preco: 1800,
-            detalhes: {
-                fabricante: 'ABC',
-                modelo: 'XYZ'
-            }
+      let produto = {
+        descricao: 'Notebook',
+        preco: 1800,
+        detalhes: {
+          fabricante: 'ABC',
+          modelo: undefined
         }
+      }
 
+      // Essa sintaxe funciona apenas para objetos com propriedades com nomes iguais
+      /*
         let { descricao,  preco } = produto
         console.log(descricao, preco)
-      </script>
+      */
+
+      // Essa outra sintaxe funciona para objetos com propriedades com nomes diferentes
+      /*
+        let { descricao: d, preco: p } = produto
+        console.log(d, p)
+      */
+
+      // Aqui podemos dar um valor padrão para a propriedade que nao existir no objeto
+      /*
+        let { descricao: d, preco: p, desconto } = produto
+        console.log(d, p, desconto)
+      */
+
+      // O desconto não existe no objeto produto, mas podemos dar um valor padrão para ele
+      /*
+        let { descricao: d, preco: p = 1000 , desconto = 5 } = produto
+        console.log(d, p, desconto)
+      */
+
+      let { detalhes: { fabricante: f, modelo = 'Não Informado' } } = produto
+      console.log(f, modelo)
+    </script>
   </head>
 
   <body>
